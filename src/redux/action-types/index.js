@@ -1,4 +1,4 @@
-export const URL = "http://localhost:3001";
+export const URL = "https://henry-overflow-api.herokuapp.com";
 
 export const admin = {
   GET_ALL_REPORTS: "GET_ALL_REPORTS",

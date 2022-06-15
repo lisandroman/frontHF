@@ -11,6 +11,7 @@ import {
 const ButtonWrapper = ({ type }) => {
   const [{ options }, dispatch] = usePayPalScriptReducer();
   const user = useSelector((state) => state.userReducer.user);
+  const URL = `https://henry-overflow-api.herokuapp.com`
 
   useEffect(() => {
     setTimeout(() => {
@@ -56,7 +57,7 @@ const ButtonWrapper = ({ type }) => {
             );
             axios
               .get(
-                `http://localhost:3001/payment/suscription-detail/${data.subscriptionID}`
+                `${URL}/payment/suscription-detail/${data.subscriptionID}`
               )
               .then((response) => {
                 console.log(response.data);
@@ -93,7 +94,7 @@ const ButtonWrapper = ({ type }) => {
                 let userId = user.id;
 
                 axios
-                  .post(`http://localhost:3001/orders/${userId}`, obj)
+                  .post(`${URL}/orders/${userId}`, obj)
 
                   .then((response) => {
                     Swal.fire(
@@ -133,7 +134,7 @@ const ButtonWrapper = ({ type }) => {
             );
             axios
               .get(
-                `http://localhost:3001/payment/suscription-detail/${data.subscriptionID}`
+                `${URL}/payment/suscription-detail/${data.subscriptionID}`
               )
               .then((response) => {
                 console.log(response.data);
@@ -170,7 +171,7 @@ const ButtonWrapper = ({ type }) => {
                 let userId = user.id;
 
                 axios
-                  .post(`http://localhost:3001/orders/${userId}`, obj)
+                  .post(`${URL}/orders/${userId}`, obj)
                   .then((response) => {
                     console.log(response);
                     Swal.fire(
@@ -211,7 +212,7 @@ const ButtonWrapper = ({ type }) => {
 
             axios
               .get(
-                `http://localhost:3001/payment/suscription-detail/${data.subscriptionID}`
+                `${URL}/payment/suscription-detail/${data.subscriptionID}`
               )
               .then((response) => {
                 console.log(response.data);
@@ -248,7 +249,7 @@ const ButtonWrapper = ({ type }) => {
                 let userId = user.id;
 
                 axios
-                  .post(`http://localhost:3001/orders/${userId}`, obj)
+                  .post(`${URL}/orders/${userId}`, obj)
                   .then((response) => {
                     Swal.fire(
                       "Aviso!",

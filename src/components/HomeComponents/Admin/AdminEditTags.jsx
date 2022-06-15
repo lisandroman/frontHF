@@ -60,7 +60,7 @@ const [tag, setTag] = useState({
 
   const handleSubmit = (e) => {
     e.preventDefault()
-      axios.post(`http://localhost:3001/admin/tags/${tag.idModulo}`, {
+    axios.post(`https://henry-overflow-api.herokuapp.com/admin/tags/${tag.idModulo}`, {
       tag: tag.name,
     }, {
       headers: {
